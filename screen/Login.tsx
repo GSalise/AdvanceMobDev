@@ -80,13 +80,17 @@ const styles = StyleSheet.create({
     input_text: {
         width: 300,
         height: 40,
-        backgroundColor: "#212121",   // Spotify dark gray (base input background)
-        color: "#fff",                // White text
-        borderRadius: 8,
+        backgroundColor: "#2c2c2cff",
+        color: "#fff",
+        borderRadius: 12,
         paddingHorizontal: 12,
         fontSize: 16,
         borderWidth: 2,
         marginBottom: 10,
+        borderTopColor: "#2c2c2cff",      // Slightly lighter top
+        borderLeftColor: "#2c2c2cff",     // Slightly lighter left
+        borderBottomColor: "#121212",   // Slightly darker bottom
+        borderRightColor: "#121212",    // Slightly darker right
     },
     forgotPassword: {
         color: "#1db954", // Optional: make it look like a link
