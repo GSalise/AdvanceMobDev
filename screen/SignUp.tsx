@@ -8,7 +8,6 @@ const BACKGROUND = '#121212'
 type RootStackParamList = {
   Login: undefined;
   SignUp: undefined;
-  Playlist: undefined;
 };
 
 export default function Login(){
@@ -22,24 +21,15 @@ export default function Login(){
             </View>
             <View style={styles.inputContainer}>
                 <TextInput style={styles.input_text} placeholder="Email" accessibilityLabel="Email Textbox, enter your email here to sign in to Spotify" />
+                <TextInput style={styles.input_text} placeholder="Contact Number" accessibilityLabel="Password Textbox, enter your email here to sign in to Spotify" />
                 <TextInput style={styles.input_text} placeholder="Password" accessibilityLabel="Password Textbox, enter your email here to sign in to Spotify" />
-                <Text style={styles.forgotPassword} accessibilityLabel="Forgot Password Link, click this to retrieve your password">Forgot Password?</Text>
-                <TouchableOpacity style={styles.signInBtn} onPress={() => navigation.navigate('Playlist')}>
-                    <Text style={styles.signInBtnTxt} accessibilityLabel="Sign In Button, click this to sign in to your Spotify account">Log In</Text>
+                <TextInput style={styles.input_text} placeholder="Confirm Password" accessibilityLabel="Password Textbox, enter your email here to sign in to Spotify" />
+                <TouchableOpacity style={styles.signInBtn}>
+                    <Text style={styles.signInBtnTxt} accessibilityLabel="Sign In Button, click this to sign in to your Spotify account">Sign Up</Text>
                 </TouchableOpacity>
-                <Text style={styles.connectWith} accessibilityLabel="Connect With your facebook or google account">Connect With</Text>
-                <View style={styles.logoRow}>
-                    <Image source={require('../assets/facebook-app-round-white-icon.png')} style={styles.fblogo} accessibilityLabel="Click this to connect with your facebook account" />
-                    <Image source={require('../assets/google-white-icon.png')} style={styles.googlelogo} accessibilityLabel="Click this to connect with your google account" />
-                </View>
-                <Text style={styles.donthave}>
-                  Don't have an account?{' '}
-                  <Text
-                    style={{ color: '#1db954', fontWeight: 'bold', fontSize: 11 }}
-                    onPress={() => navigation.navigate('SignUp')}
-                  >
-                    Sign Up
-                  </Text>
+                <Text style={styles.donthave} accessibilityLabel="Click this to create an account on Spotify">
+                  Have an account?{' '}
+                  <Text style={{ color: '#1db954', fontWeight: 'bold' }}  onPress={() => navigation.navigate('Login')}>Log In</Text>
                 </Text>
             </View>
         </View>
