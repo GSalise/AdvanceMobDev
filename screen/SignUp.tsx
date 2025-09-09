@@ -8,6 +8,8 @@ const BACKGROUND = '#121212'
 type RootStackParamList = {
   Login: undefined;
   SignUp: undefined;
+  Main: { screen: 'Playlist' } | undefined;
+  Playlist: undefined;
 };
 
 export default function Login(){
@@ -24,7 +26,7 @@ export default function Login(){
                 <TextInput style={styles.input_text} placeholder="Contact Number" accessibilityLabel="Password Textbox, enter your email here to sign in to Spotify" />
                 <TextInput style={styles.input_text} placeholder="Password" accessibilityLabel="Password Textbox, enter your email here to sign in to Spotify" />
                 <TextInput style={styles.input_text} placeholder="Confirm Password" accessibilityLabel="Password Textbox, enter your email here to sign in to Spotify" />
-                <TouchableOpacity style={styles.signInBtn}>
+                <TouchableOpacity style={styles.signInBtn} onPress={() => navigation.navigate('Main', { screen: 'Playlist' })}>
                     <Text style={styles.signInBtnTxt} accessibilityLabel="Sign In Button, click this to sign in to your Spotify account">Sign Up</Text>
                 </TouchableOpacity>
                 <Text style={styles.donthave} accessibilityLabel="Click this to create an account on Spotify">
