@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
-import { View, Text, StyleSheet, ScrollView, Image, Button } from 'react-native';
+import { View, Text, StyleSheet, ScrollView, Image, Button, TouchableOpacity } from 'react-native';
 import Sound from 'react-native-sound';
+import { useNavigation } from '@react-navigation/native';
+import { DrawerNavigationProp } from '@react-navigation/drawer';
 
 const PRIMARY = '#1976d2';
 const SURFACE = '#fff';
@@ -9,6 +11,7 @@ const ON_PRIMARY = '#fff';
 const ELEVATION = 4;
 
 export default function ComponentShowcase() {
+    const navigation = useNavigation<DrawerNavigationProp<any>>();
     const [isRhodes, setIsRhodes] = useState(true);
 
     const uri1 =  'https://static.wikia.nocookie.net/mrfz/images/c/c8/Rhodes_Island.png/revision/latest?cb=20210713014317'
@@ -37,6 +40,15 @@ export default function ComponentShowcase() {
     return (
         <View style={styles.root}>
             <View style={styles.topBar}>
+                    <TouchableOpacity
+                    style={styles.hamburger}
+                    onPress={() => navigation.openDrawer()}
+                    accessibilityLabel="Open drawer menu"
+                    >
+                    <View style={styles.bar} />
+                    <View style={styles.bar} />
+                    <View style={styles.bar} />
+                    </TouchableOpacity>
                 <Text style={styles.topBarTitle}>Component Showcase</Text>
             </View>
             <ScrollView contentContainerStyle={styles.scrollContent}>
@@ -73,6 +85,23 @@ const styles = StyleSheet.create({
     root: {
         flex: 1,
         backgroundColor: CARD,
+    },
+      hamburger: {
+        position: 'absolute',
+        top: 45,
+        left: 20,
+        zIndex: 10,
+        width: 36,
+        height: 36,
+        justifyContent: 'center',
+        alignItems: 'center',
+    },
+    bar: {
+        width: 24,
+        height: 3,
+        backgroundColor: '#fff',
+        marginVertical: 2,
+        borderRadius: 2,
     },
     topBar: {
         height: 96,

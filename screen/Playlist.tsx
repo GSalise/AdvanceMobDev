@@ -1,5 +1,7 @@
 import React from 'react';
 import { View, Text, FlatList, Image, StyleSheet, TouchableOpacity } from 'react-native';
+import { useNavigation } from '@react-navigation/native';
+import { DrawerNavigationProp } from '@react-navigation/drawer';
 
 const playlistData = [
   {
@@ -14,18 +16,30 @@ const playlistData = [
     artist: 'Parokya ni Edgar',
     albumArt: require('../assets/gitara.jpg'),
   },
-//   {
-//     id: '3',
-//     title: 'Huling El Bimbo',
-//     artist: 'Rivermaya',
-//     albumArt: require('../assets/el\ bimbo'),
-//   },
+  {
+    id: '3',
+    title: 'Huling El Bimbo',
+    artist: 'Rivermaya',
+    albumArt: require('../assets/el-bimbo.jpg'),
+  },
   // Add more songs as needed
 ];
 
 export default function Playlist() {
+  const navigation = useNavigation<DrawerNavigationProp<any>>();
+
   return (
     <View style={styles.container}>
+      {/* Hamburger Button */}
+      <TouchableOpacity
+        style={styles.hamburger}
+        onPress={() => navigation.openDrawer()}
+        accessibilityLabel="Open drawer menu"
+      >
+        <View style={styles.bar} />
+        <View style={styles.bar} />
+        <View style={styles.bar} />
+      </TouchableOpacity>
       <Text style={styles.header}>My Spotify Playlist</Text>
       <FlatList
         data={playlistData}
@@ -51,6 +65,23 @@ const styles = StyleSheet.create({
     backgroundColor: '#121212',
     paddingTop: 60,
     paddingHorizontal: 16,
+  },
+  hamburger: {
+    position: 'absolute',
+    top: 57,
+    left: 20,
+    zIndex: 10,
+    width: 36,
+    height: 36,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  bar: {
+    width: 24,
+    height: 3,
+    backgroundColor: '#fff',
+    marginVertical: 2,
+    borderRadius: 2,
   },
   header: {
     color: '#fff',
