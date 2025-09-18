@@ -287,7 +287,7 @@ export default function ProfileCard({
                 >
                   <Picker
                     selectedValue={genre}
-                    onValueChange={handleGenreChange}
+                    onValueChange={(val: string) => handleGenreChange(val)}
                     style={{ color: '#fff', width: '100%' }}
                     dropdownIconColor="#1db954"
                   >
