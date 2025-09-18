@@ -14,14 +14,21 @@ const Drawer = createDrawerNavigator();
 function DrawerScreens() {
   return (
     <Drawer.Navigator screenOptions={{ headerShown: false }}>
-      <Drawer.Screen 
-        name="Playlist" 
+      <Drawer.Screen
+        name="Playlist"
         component={Playlist}
-        options={{swipeEnabled: false}} />
-      <Drawer.Screen 
-        name="ComponentShowcase" 
+        options={{ swipeEnabled: false }}
+      />
+      <Drawer.Screen
+        name="ComponentShowcase"
         component={ComponentShowcase}
-        options={{swipeEnabled: false}} />
+        options={{ swipeEnabled: false }}
+      />
+      <Drawer.Screen
+        name="Profile"
+        getComponent={() => require('./screen/Profile/Profile').default}
+        options={{ swipeEnabled: false }}
+      />
     </Drawer.Navigator>
   );
 }
