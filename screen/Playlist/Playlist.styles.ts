@@ -1,0 +1,144 @@
+import { StyleSheet } from 'react-native';
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: '#121212',
+    paddingTop: 60,
+    paddingHorizontal: 16,
+  },
+  topbar: {
+    marginTop: -10,
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+    height: 40,
+    borderColor: 'white',
+    marginVertical: 2,
+    borderRadius: 2,
+    marginBottom: 10,
+    paddingHorizontal: 8,
+  },
+  hamburger: {
+    width: 36,
+    height: 36,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  bar: {
+    width: 24,
+    height: 3,
+    backgroundColor: '#fff',
+    marginVertical: 2,
+    borderRadius: 2,
+  },
+  header: {
+    color: '#fff',
+    fontSize: 20,
+    fontWeight: 'bold',
+    textAlign: 'center',
+    flex: 1,
+  },
+  // addSong: {
+  //   position: 'absolute',
+  //   bottom: 24, // distance from bottom
+  //   right: 24, // distance from right
+  //   backgroundColor: '#1db954',
+  //   width: 56,
+  //   height: 56,
+  //   borderRadius: 28,
+  //   justifyContent: 'center',
+  //   alignItems: 'center',
+  //   elevation: 4, // for Android shadow
+  //   shadowColor: '#000', // for iOS shadow
+  //   shadowOffset: { width: 0, height: 2 },
+  //   shadowOpacity: 0.3,
+  //   shadowRadius: 4,
+  // },
+  songContainer: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    backgroundColor: '#232323',
+    borderRadius: 12,
+    marginBottom: 16,
+    padding: 10,
+  },
+  albumArt: {
+    width: 60,
+    height: 60,
+    borderRadius: 8,
+    marginRight: 14,
+  },
+  songInfo: {
+    flex: 1,
+    justifyContent: 'center',
+  },
+  songTitle: {
+    color: '#fff',
+    fontSize: 16,
+    fontWeight: 'bold',
+  },
+  songArtist: {
+    color: '#b3b3b3',
+    fontSize: 14,
+    marginTop: 4,
+  },
+  // add: {
+  //   color: '#fff',
+  //   fontSize: 32,
+  //   fontWeight: 'bold',
+  //   marginBottom: 2,
+  // },
+
+  dropdownContainer: {
+    position: 'absolute',
+    bottom: 24,
+    right: 24,
+    alignItems: 'flex-end',
+  },
+  dropdownMenu: {
+    position: 'absolute',
+    bottom: -1,
+    right: 0,
+    alignItems: 'flex-end',
+  },
+  dropdownItem: {
+    position: 'absolute',
+    right: 0,
+    backgroundColor: '#fff',
+    paddingVertical: 10,
+    paddingHorizontal: 20,
+    borderRadius: 24,
+    elevation: 3,
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.2,
+    shadowRadius: 4,
+    marginBottom: 8,
+  },
+  dropdownLabel: {
+    color: '#1db954',
+    fontWeight: 'bold',
+  },
+  addSong: {
+    backgroundColor: '#1db954',
+    width: 56,
+    height: 56,
+    borderRadius: 28,
+    justifyContent: 'center',
+    alignItems: 'center',
+    elevation: 4,
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.3,
+    shadowRadius: 4,
+  },
+  add: {
+    color: '#fff',
+    fontSize: 32,
+    fontWeight: 'bold',
+    marginBottom: 2,
+  },
+});
+
+export default styles;

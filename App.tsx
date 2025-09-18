@@ -5,7 +5,7 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { createDrawerNavigator } from '@react-navigation/drawer';
 import Login from './screen/Login';
 import SignUp from './screen/SignUp';
-import Playlist from './screen/Playlist';
+import Playlist from './screen/Playlist/Playlist';
 import ComponentShowcase from './screen/ComponentShowcase';
 
 const Stack = createNativeStackNavigator();
