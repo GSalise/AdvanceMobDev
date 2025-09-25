@@ -10,7 +10,7 @@ import {
 } from 'react-native';
 import { TextInput } from 'react-native-gesture-handler';
 import { Picker } from '@react-native-picker/picker';
-import style from './Profile.styles';
+import getStyles from './Profile.styles'; // <-- import the function, not the object
 
 type ProfileCardProps = {
   username: string;
@@ -30,6 +30,7 @@ type ProfileCardProps = {
   validateEmail: (val: string) => boolean;
   validateGenre: (val: string) => boolean;
   genres: string[];
+  themeObj: any; // <-- add this
 };
 
 export default function ProfileCard({
@@ -50,6 +51,7 @@ export default function ProfileCard({
   validateEmail,
   validateGenre,
   genres,
+  themeObj,
 }: ProfileCardProps) {
   const [flipped, setFlipped] = useState(false);
   const animatedValue = useRef(new Animated.Value(0)).current;
@@ -155,6 +157,8 @@ export default function ProfileCard({
       flipCard();
     }
   };
+
+  const style = getStyles(themeObj); // <-- use themeObj for styles
 
   return (
     <View style={style.body}>
@@ -279,17 +283,17 @@ export default function ProfileCard({
                   style={{
                     width: 120,
                     marginTop: 8,
-                    backgroundColor: '#222',
+                    backgroundColor: themeObj.inputBackground ?? '#222',
                     borderRadius: 8,
                     borderWidth: 1,
-                    borderColor: '#1db954',
+                    borderColor: themeObj.primary,
                   }}
                 >
                   <Picker
                     selectedValue={genre}
                     onValueChange={(val: string) => handleGenreChange(val)}
-                    style={{ color: '#fff', width: '100%' }}
-                    dropdownIconColor="#1db954"
+                    style={{ color: themeObj.text, width: '100%' }}
+                    dropdownIconColor={themeObj.primary}
                   >
                     <Picker.Item label="Select Genre..." value="" />
                     {genres.map(g => (

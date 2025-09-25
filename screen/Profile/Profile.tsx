@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { View, TouchableOpacity, Text } from 'react-native';
 import LinearGradient from 'react-native-linear-gradient';
-import styles from './Profile.styles';
+import getStyles from './Profile.styles';
 import { useNavigation } from '@react-navigation/native';
 import { DrawerNavigationProp } from '@react-navigation/drawer';
 import {
@@ -13,6 +13,9 @@ import {
   validateGenre,
 } from './Profile_logic';
 import ProfileCard from './ProfileCard';
+import { useSelector } from 'react-redux';
+import { RootState } from '../../store';
+import { lightTheme, darkTheme } from '../../theme';
 
 export default function Profile() {
   const navigation = useNavigation<DrawerNavigationProp<any>>();
@@ -22,6 +25,11 @@ export default function Profile() {
   const [usernameError, setUsernameError] = useState('');
   const [emailError, setEmailError] = useState('');
   const [genreError, setGenreError] = useState('');
+
+  // Get theme from Redux
+  const theme = useSelector((state: RootState) => state.theme.value);
+  const themeObj = theme === 'dark' ? darkTheme : lightTheme;
+  const styles = getStyles(themeObj);
 
   useEffect(() => {
     loadProfile().then(profile => {
@@ -35,9 +43,15 @@ export default function Profile() {
     saveProfile({ username, email, genre });
   };
 
+  // Use themed gradient colors, fallback to original if not present
+  const gradientColors =
+    theme === 'dark'
+      ? [themeObj.background, themeObj.primary]
+      : [themeObj.background, themeObj.primary];
+
   return (
     <LinearGradient
-      colors={['#000', '#1db954']}
+      colors={gradientColors}
       start={{ x: 0.5, y: 0 }}
       end={{ x: 0.5, y: 1 }}
       style={styles.container}
@@ -80,6 +94,7 @@ export default function Profile() {
         validateEmail={validateEmail}
         validateGenre={validateGenre}
         genres={GENRES}
+        themeObj={themeObj}
       />
     </LinearGradient>
   );

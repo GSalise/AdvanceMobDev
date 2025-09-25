@@ -13,8 +13,10 @@ import { DrawerNavigationProp } from '@react-navigation/drawer';
 import Swipeable from 'react-native-gesture-handler/ReanimatedSwipeable';
 import AddSongModal from './AddSongModal';
 import { renderRightActions } from './Playlist_logic';
-import styles from './Playlist.styles';
+import getStyles from './Playlist.styles'; // <-- import the function, not object
 import { getPlaylist, addSong, updateSong, deleteSong } from './Playlist_logic';
+import { useTheme } from '../../context/ThemeContext';
+import { lightTheme, darkTheme } from '../../theme';
 
 export default function Playlist() {
   const navigation = useNavigation<DrawerNavigationProp<any>>();
@@ -23,6 +25,10 @@ export default function Playlist() {
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const [undoStack, setUndoStack] = useState<any[][]>([]);
   const [redoStack, setRedoStack] = useState<any[][]>([]);
+  const { theme } = useTheme();
+  const themeObj = theme === 'dark' ? darkTheme : lightTheme;
+
+  const styles = getStyles(themeObj); // <-- get styles with theme
 
   useEffect(() => {
     loadPlaylist();
