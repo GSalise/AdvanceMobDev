@@ -20,6 +20,18 @@ Profile
 <img width="40%" alt="image" src="https://github.com/user-attachments/assets/53261816-2160-443e-a3d8-9fe853fef6f9" />
 Profile editing
 <img width="40%" alt="image" src="https://github.com/user-attachments/assets/304052f9-423d-4ca1-af3e-892126a1015d" />
-
 Error checking
 <img width="40%" alt="image" src="https://github.com/user-attachments/assets/247c4f21-091a-4cfa-8047-f0d970791a9a" />
+
+# Activity 6: Theme Switcher - Week 5
+<img width="40%" alt="image" src="https://github.com/user-attachments/assets/a1fbd7bd-fa13-436d-a48d-428566a7d436" />
+<img width="40%" alt="image" src="https://github.com/user-attachments/assets/570ad15a-db60-419d-9d3d-150ffbd15152" />
+
+# Activity 7: Camera - Week 5
+<img width="40%" alt="image" src="https://github.com/user-attachments/assets/5c9b1349-b932-4e97-9c46-18259cb56b6f" />
+<img width="40%" alt="image" src="https://github.com/user-attachments/assets/d161c8ad-80cf-4ab4-a180-5008def08722" />
+
+# Activity 7: IOS - Week 6
+<img width="40%" alt="image" src="https://github.com/user-attachments/assets/1002c376-b22c-452b-b7cb-c007ea83cd9a" />
+<img width="40%" height="971" alt="image" src="https://github.com/user-attachments/assets/669e1103-7ec6-4f6f-9f6f-974cdc8c3fb7" />
+
