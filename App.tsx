@@ -44,6 +44,11 @@ function DrawerScreens() {
         getComponent={() => require('./screen/Camera/Camera').default}
         options={{ swipeEnabled: false }}
       />
+      <Drawer.Screen
+        name="Map"
+        getComponent={() => require('./screen/Map').default}
+        options={{ swipeEnabled: false }}
+      />
     </Drawer.Navigator>
   );
 }
