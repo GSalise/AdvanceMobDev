@@ -85,3 +85,16 @@ Successfully tested the application running on iOS.
 <img src="https://github.com/user-attachments/assets/669e1103-7ec6-4f6f-9f6f-974cdc8c3fb7" width="20%"/>
 
 ---
+
+### Activity 9: Geolocation (week 6)
+
+Added geolocation and geofencing capabilities
+
+<img src="https://github.com/user-attachments/assets/7eb4be9f-e12e-4ce8-b856-58d76b7569fd" width="20%%" />
+<img src="https://github.com/user-attachments/assets/859d7d7d-9641-416d-aa3f-d53955572657" width="20%%" />
+<img src="https://github.com/user-attachments/assets/082b5380-3ae2-4834-97af-d88b230be99c" width="20%%" />
+<img rc="https://github.com/user-attachments/assets/6769b82e-a684-4142-a152-e2b58b0dbd4f" width="20%%" />
+
+
+
+
