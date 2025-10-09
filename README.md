@@ -86,7 +86,7 @@ Successfully tested the application running on iOS.
 
 ---
 
-### Activity 9: Geolocation (week 6)
+### Activity 9: Geolocation (Week 6)
 
 Added geolocation and geofencing capabilities
 
