@@ -95,6 +95,16 @@ Added geolocation and geofencing capabilities
 <img src="https://github.com/user-attachments/assets/082b5380-3ae2-4834-97af-d88b230be99c" width="20%%" />
 <img src="https://github.com/user-attachments/assets/6769b82e-a684-4142-a152-e2b58b0dbd4f" width="20%%" />
 
+### Activity 10: PokeDex (Week 7)
+
+Created a PokeDex app by making use of PokeApi in a new repository.
+
+Repository Link: https://github.com/GSalise/PokeDex-AdvMobDev
+
+<img src="https://github.com/user-attachments/assets/d9500a3f-ceef-4cfb-bdca-c14efc164909" width="20%" />
+<img src="https://github.com/user-attachments/assets/ba098247-34be-4ea3-97ff-6b34d19493e1" width="20%" />
+
+
 
 
 
