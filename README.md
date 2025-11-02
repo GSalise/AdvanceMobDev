@@ -104,6 +104,13 @@ Repository Link: https://github.com/GSalise/PokeDex-AdvMobDev
 <img src="https://github.com/user-attachments/assets/d9500a3f-ceef-4cfb-bdca-c14efc164909" width="20%" />
 <img src="https://github.com/user-attachments/assets/ba098247-34be-4ea3-97ff-6b34d19493e1" width="20%" />
 
+### Activity 11: PokeDex AR (Week 8)
+
+While I was able to implement the feature, I am unable to test it because my phone does not support AR.
+
+<img src="https://github.com/user-attachments/assets/51913d9e-0f2b-4518-a6d0-ba88ec960297" width="20%" />
+
+
 
 
 
